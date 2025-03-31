@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Script Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">ntmh code</div>
+            <ul>
+                <li><a href="#" id="home-btn" class="active">Home</a></li>
+                <li><a href="#" id="share-btn">Share Script</a></li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-bg-btn">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="content">
+            <div class="planet">
+                <div class="ring"></div>
+                <div class="cover-ring"></div>
+                <div class="spots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <p>loading</p>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home-section" class="section active">
+        <div class="intro">
+            <h1>Chào mừng đến Script Haven</h1>
+            <p>Blog chia sẻ mã nguồn mở miễn phí để bạn khám phá và tùy chỉnh.</p>
+            <p id="user-ip">Địa chỉ IP của bạn: <span>Đang tải...</span></p>
+            <div class="feature-boxes">
+                <div class="feature">
+                    <h3>Miễn phí</h3>
+                    <p>Tất cả script đều miễn phí để tải xuống.</p>
+                </div>
+                <div class="feature">
+                    <h3>Mở</h3>
+                    <p>Mã nguồn mở, thoải mái chỉnh sửa.</p>
+                </div>
+                <div class="feature">
+                    <h3>Owner Legit</h3>
+                    <p>Tui La Cho Gau Gau Gau</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Script Section -->
+    <section id="share-section" class="section">
+        <div class="blog-container" id="blog-container">
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Anti Cheat">
+                <div class="blog-content">
+                    <h2>Anti Cheat</h2>
+                    <p class="caption">Đoạn Code Anti Cheat Có Thể Thêm Vào Game Trong Roblox Studio</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/4PaYt" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Blade Ball Old</h2>
+                    <p class="caption">Suorce Blade Ball tuy đã cũ nhưng có thể vọc vạch</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/xYX11CrM" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce UI Kaitun</h2>
+                    <p class="caption">UI Kaitun khá ổn</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/0taT1R" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Vy Gaming</h2>
+                    <p class="caption">Suorce Vy Gaming dùng cho blox fruit khá ổn riêng tôi thì đéo biết lồn đó là ai</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/ahWcW0vC" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Akiri UI</h2>
+                    <p class="caption">Suorce Akiri U</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/gPGT" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Akiri Blox Fruit</h2>
+                    <p class="caption">Suorce này khác với UI nó có đủ chức năng cho anh em vọc</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/gPGT" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Alpha</h2>
+                    <p class="caption">Suorce Alpha tuy đã cũ nhưng có thể vọc vạch</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/bstl" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Auto Bounty1 Old</h2>
+                    <p class="caption">Suorce Auto Bounty tuy đã cũ nhưng có thể vọc vạch</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/VU9xnFS7" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Auto Rejoin Server Vip</h2>
+                    <p class="caption">Suorce này tôi cũng chả biết dùng được hay không</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/QKlXfvJu" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce FPS BOOST</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/Af2iPt" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Function Hub</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/4ACNhD" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce KaiTun</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/N4OfLnpM" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Light Hub</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/1M1i0I" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Lunar Hub</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/xs95x3" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce UI</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/FVw7i" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Hub Gì Đó</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/PhMu6x" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce IDK</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/JnNet" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Neva Old</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/VN9y" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Per Zeon</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/jxi1h9Dn" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://cdn.discordapp.com/attachments/1327807265616564266/1356356967483838464/393793595_835110771954153_1556594424971751611_n.jpg?ex=67ec455c&is=67eaf3dc&hm=55f0334bb0afec615e623bb119d40db4a7628e39739885e47690baef78c44052&" alt="Script Hiệu ứng">
+                <div class="blog-content">
+                    <h2>Suorce Per Zeon X</h2>
+                    <p class="caption">IDK</p>
+                    <p class="description">ảnh chỉ là minh họa</p>
+                    <a href="https://shrinkme.ink/zuLSHWhu" class="download-btn">Tải xuống</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Social Links Footer -->
+    <div class="social-links">
+        <a href="https://github.com/nguoitinhmuahe" target="_blank" class="social-link" data-tooltip="vô xem profile tao cho vui đi chứ tao đéo share gì trên đó đâu maybe">
+            <img src="github.png" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://discord.gg/SQRzpppH4w" target="_blank" class="social-link" data-tooltip="Tham gia server đi có hub ngon đó">
+            <img src="discord.png" alt="Discord" class="social-icon">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61572313778082" target="_blank" class="social-link" data-tooltip="Theo dõi tao trên Facebook điiiii">
+            <img src="facebook.png" alt="Facebook" class="social-icon">
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
