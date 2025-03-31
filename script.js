@@ -18,54 +18,59 @@ fetch('https://api.ipify.org?format=json')
         userIpElement.innerHTML = `Không thể lấy IP: ${error.message}`;
     });
 
-// Tạo định danh HWID giả lập dựa trên IP và User-Agent
-function generateHWID() {
-    const userAgent = navigator.userAgent;
-    const ip = userIpElement.textContent.split(': ')[1] || 'unknown'; // Lấy IP từ giao diện nếu có
-    return btoa(userAgent + ip); // Mã hóa để tạo chuỗi duy nhất
+// Tạo hoặc lấy HWID cố định
+function getOrCreateHWID() {
+    const hwidKey = 'hwid_fixed';
+    let hwid = localStorage.getItem(hwidKey);
+    if (!hwid) {
+        // Tạo HWID mới dựa trên User-Agent và một chuỗi ngẫu nhiên
+        const userAgent = navigator.userAgent;
+        const randomStr = Math.random().toString(36).substring(2, 15);
+        hwid = btoa(userAgent + randomStr);
+        localStorage.setItem(hwidKey, hwid); // Lưu HWID cố định
+    }
+    return hwid;
 }
 
 // Quản lý lượt tải xuống
 function manageDownloads() {
-    const hwid = generateHWID();
+    const hwid = getOrCreateHWID();
     const storageKey = `download_${hwid}`;
     let downloadData = JSON.parse(localStorage.getItem(storageKey)) || {
         count: 0,
-        resetTime: null,
-        lastUpdate: Date.now()
+        resetTime: null
     };
 
     const now = Date.now();
     const thirtyHours = 30 * 60 * 60 * 1000; // 30 tiếng tính bằng milliseconds
 
-    // Kiểm tra thời gian reset dựa trên thời gian thực
+    // Kiểm tra và reset nếu đã quá 30 tiếng
     if (downloadData.resetTime && now >= downloadData.resetTime) {
         downloadData = {
             count: 0,
-            resetTime: null,
-            lastUpdate: now
+            resetTime: null
         };
+        localStorage.setItem(storageKey, JSON.stringify(downloadData));
     }
 
     downloadButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const currentTime = Date.now();
-            // Cập nhật lại thời gian nếu đã quá 30 tiếng từ lần cuối
+
+            // Kiểm tra lại thời gian reset
             if (downloadData.resetTime && currentTime >= downloadData.resetTime) {
                 downloadData = {
                     count: 0,
-                    resetTime: null,
-                    lastUpdate: currentTime
+                    resetTime: null
                 };
             }
 
-            if (downloadData.count >= 3 && currentTime < downloadData.resetTime) {
+            if (downloadData.count >= 3 && (!downloadData.resetTime || currentTime < downloadData.resetTime)) {
                 e.preventDefault();
                 const timeLeft = Math.ceil((downloadData.resetTime - currentTime) / (60 * 60 * 1000));
                 alert(`Bạn đã tải 3 file. Vui lòng đợi ${timeLeft} tiếng để tải thêm.`);
             } else {
                 downloadData.count++;
-                downloadData.lastUpdate = currentTime;
                 if (downloadData.count === 3) {
                     downloadData.resetTime = currentTime + thirtyHours;
                 }
@@ -74,9 +79,6 @@ function manageDownloads() {
             }
         });
     });
-
-    // Lưu lại dữ liệu ngay cả khi đóng trình duyệt
-    localStorage.setItem(storageKey, JSON.stringify(downloadData));
 }
 
 // Gọi hàm quản lý tải xuống
